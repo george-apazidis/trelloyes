@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React assignment as part of my Thinkful bootcamp curriculum to practice component composition and props.
+[link to assignment](https://courses.thinkful.com/react-v1/checkpoint/7)
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).d
 
 ## Available Scripts
 
