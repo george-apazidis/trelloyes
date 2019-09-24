@@ -1,4 +1,5 @@
 This is a React assignment as part of my Thinkful bootcamp curriculum to practice component composition and props.
+
 [link to assignment](https://courses.thinkful.com/react-v1/checkpoint/7)
 
 
