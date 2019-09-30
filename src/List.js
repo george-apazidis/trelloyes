@@ -4,11 +4,27 @@ import Card from "./Card";
 class List extends Component {
   render() {
     console.log(`List props `, this.props);
+    /* PROPS
+      header : "First list",
+      cards : [
+        {
+          id:a,
+          title:"first car",
+          content:"lorm"
+        },
+        {
+          id:b,
+          title:"second car",
+          content:"lorm"
+        },
+      ]
+      onDeleteCard : f
+
+    */
 
     // destructing
-    const { header } = this.props;
-    const { cards } = this.props;
-    console.log(cards)
+    const { header, cards, onDeleteCard } = this.props;
+    console.log(cards);
     return (
       <section className="List">
         <header className="List-header">
@@ -16,7 +32,13 @@ class List extends Component {
         </header>
         <div className="List-cards">
           {cards.map(card => (
-            <Card key={card.id} title={card.title} content={card.content} />
+            <Card
+              key={card.id}
+              // title={card.title}
+              // content={card.content}
+              card={card}
+              onDeleteCard={onDeleteCard}
+            />
           ))}
 
           <button type="button" className="List-add-button">
