@@ -2,6 +2,12 @@ import React from "react";
 import ShoppingItem from "./ShoppingItem";
 
 function ShoppingList(props) {
+  console.log(`inside ShoppingList`, props)
+  /* props
+    items : [{apples},{oranges},{bread}]
+    onDeleteItem : f
+    onCheckItem : f
+  */
   return (
     <ul>
       {props.items.map((item, i) => (

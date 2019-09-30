@@ -1,6 +1,12 @@
 import React from "react";
 
 function ShoppingItem(props) {
+  console.log(`inside ShoppingItem`, props)
+  /* props
+    items : {apples}
+    onDeleteItem : f
+    onCheckItem : f
+  */
   return (
     <li>
       <h2
@@ -10,8 +16,9 @@ function ShoppingItem(props) {
       >
         {props.item.name}
       </h2>
-      <button type="button" onClick={props.onCheckItem}>check</button>
-      <button type="button" onClick={props.onDeleteItem}>delete</button>
+      {/* pass entire item object to Check or Delete mehods */}
+      <button type="button" onClick={() => props.onCheckItem(props.item)}>check</button>
+      <button type="button" onClick={() => props.onDeleteItem(props.item)}>delete</button>
     </li>
   );
 }

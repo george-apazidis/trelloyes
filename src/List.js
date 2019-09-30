@@ -8,7 +8,7 @@ class List extends Component {
     // destructing
     const { header } = this.props;
     const { cards } = this.props;
-
+    console.log(cards)
     return (
       <section className="List">
         <header className="List-header">

@@ -10,11 +10,13 @@ exports[`ShoppingItem component renders empty given no item 1`] = `
     }
   />
   <button
+    onClick={[Function]}
     type="button"
   >
     check
   </button>
   <button
+    onClick={[Function]}
     type="button"
   >
     delete
@@ -34,11 +36,13 @@ exports[`ShoppingItem component renders the item when supplied 1`] = `
     test-item
   </h2>
   <button
+    onClick={[Function]}
     type="button"
   >
     check
   </button>
   <button
+    onClick={[Function]}
     type="button"
   >
     delete
@@ -58,11 +62,13 @@ exports[`ShoppingItem component strikes through checked items 1`] = `
     checked-item
   </h2>
   <button
+    onClick={[Function]}
     type="button"
   >
     check
   </button>
   <button
+    onClick={[Function]}
     type="button"
   >
     delete
