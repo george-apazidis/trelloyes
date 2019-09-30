@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App2 from "./App2";
+import ShoppingListApp from "./ShoppingListApp";
 import "./index.css";
 import STORE from "./STORE.js";
 
-ReactDOM.render(<App2 />, document.getElementById("root"));
+ReactDOM.render(<ShoppingListApp />, document.getElementById("root"));

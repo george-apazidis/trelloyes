@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import AddItemForm from "./shopping-list/AddItemForm";
 import ShoppingList from "./shopping-list/ShoppingList";
 
-class App2 extends Component {
+class ShoppingListApp extends Component {
   state = {
     shoppingItems: [
       /* put stub items in here for testing */
@@ -11,6 +11,13 @@ class App2 extends Component {
       { name: "bread", checked: false }
     ]
   };
+
+  handleDeleteItem() {
+    console.log("handle delete item called");
+  }
+  handleCheckItem() {
+    console.log("handle check item called");
+  }
 
   render() {
     return (
@@ -23,7 +30,11 @@ class App2 extends Component {
             <AddItemForm />
           </section>
           <section>
-            <ShoppingList items={this.state.shoppingItems} />
+            <ShoppingList
+              items={this.state.shoppingItems}
+              onDeleteItem={this.handleDeleteItem}
+              onCheckItem={this.handleCheckItem}
+            />
           </section>
         </main>
       </>
@@ -31,4 +42,4 @@ class App2 extends Component {
   }
 }
 
-export default App2;
+export default ShoppingListApp;
