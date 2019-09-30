@@ -11,7 +11,14 @@ class ShoppingListApp extends Component {
       { name: "bread", checked: false }
     ]
   };
-
+  handleAddItem = itemName => {
+    console.log("handle add item", { itemName });
+    const newItems = [
+      ...this.state.shoppingItems,
+      { name: itemName, checked: false }
+    ];
+    this.setState({ shoppingItems: newItems });
+  };
   handleDeleteItem = item => {
     // grab shopping Items from state and remove the item that was clicked
     const newItems = this.state.shoppingItems.filter(itm => itm !== item);
@@ -42,7 +49,7 @@ class ShoppingListApp extends Component {
         </header>
         <main>
           <section>
-            <AddItemForm />
+            <AddItemForm onAddItem={this.handleAddItem} />
           </section>
           <section>
             <ShoppingList
