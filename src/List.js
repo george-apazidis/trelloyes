@@ -19,12 +19,12 @@ class List extends Component {
           content:"lorm"
         },
       ]
-      onDeleteCard : f
-
+      onDeleteCard : f,
+      onClickAdd
     */
 
     // destructing
-    const { header, cards, onDeleteCard } = this.props;
+    const { header, cards, onDeleteCard, onClickAdd, id } = this.props;
     console.log(cards);
     return (
       <section className="List">
@@ -42,7 +42,12 @@ class List extends Component {
             />
           ))}
 
-          <button type="button" className="List-add-button">
+          <button
+            type="button"
+            className="List-add-button"
+            onClick={() => onClickAdd(id)}
+            
+          >
             + Add Random Card
           </button>
         </div>
