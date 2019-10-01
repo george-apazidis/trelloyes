@@ -2,29 +2,38 @@ import React, { Component } from "react";
 import List from "./List";
 import STORE from "./STORE";
 
+function omit(obj, keyToOmit) {
+  return Object.entries(obj).reduce(
+    (newObj, [key, value]) =>
+      key === keyToOmit ? newObj : { ...newObj, [key]: value },
+    {}
+  );
+}
+
 class App extends Component {
   state = {
-    store: STORE,
+    store: STORE
   };
 
-  handleDeleteCard = item => {
-    console.log(item);
+  handleDeleteCard = cardId => {
+    const { lists, allCards } = this.state.store;
 
-    // remove from store.lists.cardIds
-    // const newCardIds = this.state.store.lists.
-    // .map()
-    //   cardIds.filter(id => id !== item);
-    // this.setState({
-    //   store: newItems
-    // });
+    // for each list item
+    const newLists = lists.map(list => ({
+      // spread the entire list item
+      ...list,
+      // keep all cards that dont match the passed in prop cardID
+      cardIds: list.cardIds.filter(id => id !== cardId)
+    }));
 
-    // remove from store.allCards
+    const newCards = omit(allCards, cardId);
 
-
-    // const newItems = this.state.store.lists.cardIds.filter(id => id !== item.id);
-    // this.setState({
-    //   store: newItems
-    // });
+    this.setState({
+      store: {
+        lists: newLists,
+        allCards: newCards
+      }
+    });
   };
 
   render() {
