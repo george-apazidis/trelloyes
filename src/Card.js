@@ -4,21 +4,20 @@ class Card extends Component {
   render() {
     console.log(`Card Props for card`, this.props);
     /* PROPS
-      card: 
-        {
+      {
+        id : "a",
         title: "First card",
-        content: "lorem ipsum"
-        }
-      onDeleteCard : f
+        content: "lorem"
+        onDeleteCard : f
+      }
     */
 
     // destructing
-    const { card, onDeleteCard } = this.props;
-    const { title, content } = this.props.card;
+    const { title, content, id, onDeleteCard } = this.props;
     
     return (
       <div className="Card">
-        <button type="button" onClick={() => onDeleteCard(card)}>
+        <button type="button" onClick={() => onDeleteCard(id)}>
           delete
         </button>
         <h3>{title}</h3>

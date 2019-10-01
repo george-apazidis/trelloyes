@@ -5,6 +5,7 @@ class List extends Component {
   render() {
     console.log(`List props `, this.props);
     /* PROPS
+      id : 1
       header : "First list",
       cards : [
         {
@@ -34,9 +35,9 @@ class List extends Component {
           {cards.map(card => (
             <Card
               key={card.id}
-              // title={card.title}
-              // content={card.content}
-              card={card}
+              id={card.id}
+              title={card.title}
+              content={card.content}
               onDeleteCard={onDeleteCard}
             />
           ))}
